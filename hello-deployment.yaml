@@ -5,24 +5,24 @@ metadata:
   name: hellons
 
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: hello-ingress
-  namespace: hellons
-spec:
-  ingressClassName: nginx
-  rules:
-  - host: kubernetes.docker.internal
-    http:
-      paths:
-      - path: /hello
-        pathType: Prefix
-        backend:
-          service:
-            name: hello-service
-            port:
-              number: 80
+#apiVersion: networking.k8s.io/v1
+#kind: Ingress
+#metadata:
+#  name: hello-ingress
+#  namespace: hellons
+#spec:
+#  ingressClassName: nginx
+#  rules:
+#  - host: kubernetes.docker.internal
+#    http:
+#      paths:
+#      - path: /hello
+#        pathType: Prefix
+#        backend:
+#          service:
+#            name: hello-service
+#            port:
+#              number: 80
 
 ---
 apiVersion: apps/v1
